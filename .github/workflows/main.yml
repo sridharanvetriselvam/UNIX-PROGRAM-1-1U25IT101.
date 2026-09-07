@@ -1,0 +1,86 @@
+name: CentOS VirtualBox Practical Evaluation
+
+on:
+push:
+branches:
+- main
+
+pull_request:
+branches:
+- main
+
+jobs:
+
+evaluate:
+
+```
+name: Evaluate Student Submission
+
+runs-on: ubuntu-latest
+
+steps:
+
+  # ----------------------------------------
+  # Download student's repository
+  # ----------------------------------------
+
+  - name: Checkout Repository
+    uses: actions/checkout@v4
+
+
+  # ----------------------------------------
+  # Display student submission information
+  # ----------------------------------------
+
+  - name: Display Submission Information
+    run: |
+      echo "======================================"
+      echo "CentOS VirtualBox Practical"
+      echo "GitHub Automatic Evaluation"
+      echo "======================================"
+
+      echo ""
+      echo "Repository:"
+      echo "${{ github.repository }}"
+
+      echo ""
+      echo "Student Commit:"
+      echo "${{ github.sha }}"
+
+
+  # ----------------------------------------
+  # Check repository structure
+  # ----------------------------------------
+
+  - name: Check Repository Structure
+    run: |
+      echo "Checking repository..."
+
+      echo ""
+      echo "Files:"
+      find . -maxdepth 2 -type f | sort
+
+
+  # ----------------------------------------
+  # Run automatic tests
+  # ----------------------------------------
+
+  - name: Run Practical Evaluation
+    run: |
+
+      chmod +x tests/test_submission.sh
+
+      ./tests/test_submission.sh
+
+
+  # ----------------------------------------
+  # Completion message
+  # ----------------------------------------
+
+  - name: Evaluation Completed
+    run: |
+      echo ""
+      echo "======================================"
+      echo "Evaluation Completed"
+      echo "======================================"
+```

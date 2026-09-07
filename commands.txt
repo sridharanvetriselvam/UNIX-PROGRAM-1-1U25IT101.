@@ -1,0 +1,82 @@
+========================================
+CENTOS VIRTUALBOX PRACTICAL
+COMMAND OUTPUT
+==============
+
+Student Name:
+Register Number:
+
+========================================
+
+1. HOSTNAME
+   ========================================
+
+Command:
+hostname
+
+Output:
+PASTE YOUR OUTPUT HERE
+
+========================================
+2. OPERATING SYSTEM INFORMATION
+===============================
+
+Command:
+cat /etc/os-release
+
+Output:
+PASTE YOUR OUTPUT HERE
+
+========================================
+3. KERNEL VERSION
+=================
+
+Command:
+uname -r
+
+Output:
+PASTE YOUR OUTPUT HERE
+
+========================================
+4. MEMORY INFORMATION
+=====================
+
+Command:
+free -h
+
+Output:
+PASTE YOUR OUTPUT HERE
+
+========================================
+5. DISK INFORMATION
+===================
+
+Command:
+df -h
+
+Output:
+PASTE YOUR OUTPUT HERE
+
+========================================
+6. CURRENT USER
+===============
+
+Command:
+whoami
+
+Output:
+PASTE YOUR OUTPUT HERE
+
+========================================
+7. DATE AND TIME
+================
+
+Command:
+date
+
+Output:
+PASTE YOUR OUTPUT HERE
+
+========================================
+END OF COMMAND OUTPUT
+=====================
